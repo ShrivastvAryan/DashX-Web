@@ -1,0 +1,2 @@
+[compile]
+external = ["static/media/HeartbeatWorker.js"]

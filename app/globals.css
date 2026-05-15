@@ -1,0 +1,516 @@
+/* ------------------------------------------------------
+   FONT: Inter (Display)
+------------------------------------------------------ */
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/Inter-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/Inter-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/Inter-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/Inter-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------
+   FONT: Redaction
+------------------------------------------------------ */
+@font-face {
+  font-family: "Redaction";
+  src: url("/fonts/Redaction-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Redaction";
+  src: url("/fonts/Redaction-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Redaction";
+  src: url("/fonts/Redaction-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------
+   FONT: Redaction10
+------------------------------------------------------ */
+@font-face {
+  font-family: "Redaction10";
+  src: url("/fonts/Redaction10-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Redaction10";
+  src: url("/fonts/Redaction10-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Redaction10";
+  src: url("/fonts/Redaction10-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------
+   FONT: DM Sans
+------------------------------------------------------ */
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------
+   TAILWIND
+------------------------------------------------------ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------
+   BASE
+------------------------------------------------------ */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    @apply w-screen bg-background text-foreground;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  .custom-swiper {
+  overflow: visible !important;
+}
+
+.custom-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.custom-swiper .swiper-slide {
+  height: auto;
+}
+
+.feedback-card {
+  height: 450px;
+  background: white;
+  border-radius: 32px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.feedback-category {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #111;
+  opacity: 0.8;
+}
+
+.feedback-text {
+  font-size: 24px;
+  line-height: 1.3;
+  color: #2f2e31;
+  font-weight: 500;
+}
+
+.feedback-author {
+  font-size: 15px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .feedback-card {
+    height: 380px;
+    padding: 24px;
+  }
+
+  .feedback-text {
+    font-size: 18px;
+  }
+}
+
+  :root {
+    --font-sans: "Inter Display", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+    --font-display: "Playfair Display", ui-serif, Georgia, "Times New Roman",
+      serif;
+    --font-redaction: "Redaction", serif;
+    --font-redaction10: "Redaction10", serif;
+    --font-dmsans: "DM Sans", sans-serif;
+    --font-mono: var(--font-sans);
+
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  code,
+  pre {
+    font-family: var(--font-mono);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+/* ------------------------------------------------------
+   UTILITIES
+------------------------------------------------------ */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ------------------------------------------------------
+   CUSTOM STYLES
+------------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-bg {
+  position: relative;
+  background: linear-gradient(135deg, #111827, #1e3a8a); /* your bg */
+  overflow: hidden;
+}
+
+.custom-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/white-pattern.png'); /* transparent texture */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------
+   3D / INTERACTIVE
+------------------------------------------------------ */
+.tilt-card {
+  --rx: 0deg;
+  --ry: 0deg;
+  --mx: 50%;
+  --my: 50%;
+  --scale: 1;
+  --glare: 0;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: perspective(1200px) rotateX(var(--rx)) rotateY(var(--ry))
+    scale(var(--scale));
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.tilt-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: var(--glare);
+  background: radial-gradient(
+    circle at var(--mx) var(--my),
+    rgba(255, 255, 255, 0.45),
+    transparent 55%
+  );
+  mix-blend-mode: overlay;
+  transition: opacity 220ms ease;
+}
+
+.btn-3d {
+  box-shadow: 0 14px 40px rgba(11, 74, 225, 0.16),
+    0 2px 10px rgba(0, 0, 0, 0.06);
+  transform: translateZ(0);
+}
+
+.btn-3d:hover {
+  box-shadow: 0 18px 60px rgba(11, 74, 225, 0.22),
+    0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn-3d:active {
+  transform: translateY(1px) translateZ(0);
+}
+
+.cta-lux {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  backdrop-filter: blur(10px);
+  isolation: isolate;
+}
+
+.cta-lux::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  transform: translateX(-130%) skewX(-18deg);
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 40%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.55) 60%,
+    transparent 100%
+  );
+  opacity: 0.65;
+  animation: sheen 2.9s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta-lux:hover::after {
+  animation-duration: 1.8s;
+  opacity: 0.9;
+}
+
+.cta-lux > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes sheen {
+  0% {
+    transform: translateX(-130%) skewX(-18deg);
+  }
+  55% {
+    transform: translateX(130%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(130%) skewX(-18deg);
+  }
+}
+
+/* Horizontal logo scroller */
+.logos-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+}
+
+.logos-container::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-foreground;
+}
+
+/* Scroll animations */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes partners-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-partners-scroll {
+  animation: partners-scroll 30s linear infinite;
+}
+
+/* Animated Background Circle */
+.animatedCircle {
+  @apply size-[30rem] md:size-[90rem] absolute top-[-15%] right-[-75%] md:top-[-80%] md:right-[-30%];
+  background: radial-gradient(
+    circle at -5% 50%,
+    #ffffff,
+    #709afbb0,
+    #6d98fb,
+    #346ef8,
+    #0b4ae1,
+    #0b4ae1,
+    #0b4ae1,
+    #0b4ae1,
+    #0b4ae1
+  );
+  border-radius: 50%;
+  transform: scale(0.5);
+  animation: moveCircle 2s ease-out forwards, jiggle 4s ease-in-out 2s infinite alternate;
+  z-index: -1;
+  overflow: hidden;
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.05),
+    0 15px 10px rgba(0, 0, 0, 0.08),
+    0 25px 10px rgba(0, 0, 0, 0.048);
+}
+
+@keyframes moveCircle {
+  0% { transform: scale(0.5); }
+  100% { transform: scale(1); }
+}
+
+@keyframes jiggle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* Layout overrides */
+#campaign div.rt-Flex {
+  @apply w-full max-w-2xl;
+}
+
+#connectButton > div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Framework country carousel – smooth linear auto-scroll */
+.country-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
